@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #e0e0e0 ;
+}
+
+.brand-logo {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.detalhesEvento {
+	box-shadow: 0px 0px 5px grey;
+	padding-top: 10px;
+	padding-left: 20px;
+	margin-bottom: 60px;
+}
+
+.formConvidado {
+	box-shadow: 0px 0px 5px grey;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 60px;
+}
+
+.tabelaConvidado {
+	width: 50%;
+}
+
+.formEvento {
+	box-shadow: 0px 0px 5px grey;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 60px;
+}
+
+.nav-wrapper {
+	padding-left: 20px;
+}
+
+.th-eventos {
+	text-transform: uppercase;
+}
+
+.eventos-style {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.span-local {
+	font-weight: 600;	
+}
+
+.span-data {
+	font-weight: 400;	
+}
+
+.span-horario {
+	font-weight: 400;	
+}
+
+.span-convidado {
+	font-weight: 600;
+}
+
+.span-rg {
+	font-weight: 400;	
+}

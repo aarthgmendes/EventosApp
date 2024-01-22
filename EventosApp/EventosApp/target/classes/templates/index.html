@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+<title>EventosApp</title>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"
+	media="screen,projection" />
+	<link rel="stylesheet" href="style/styleCss.css">
+
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<body>
+	<header>
+	  <nav>
+    	<div class="nav-wrapper purple darken-2">
+      	<a href="#" class="brand-logo">Lista de Eventos</a>
+      		<ul id="nav-mobile" class="right hide-on-med-and-down">
+        		<li><a href="/cadastrarEvento" class="waves-effect waves-light btn purple lighten-1"><i class="material-icons left">add_circle_outline</i>Cadastrar Evento</a></li>
+      		</ul>
+    </div>
+  </nav>
+	</header>
+	<table class="container">
+	<thead>
+		<tr>
+			<th class="th-eventos">Nome</th>
+			<th class="th-eventos">Local</th>
+			<th class="th-eventos">Data</th>
+			<th class="th-eventos">Horario</th>
+			<th class="th-eventos">Deletar</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="evento : ${eventos}">
+			<td><a class="eventos-style purple-text text-darken-1" th:href="${(#mvc.url('EC#detalhesEvento').arg(0, evento.id)).build()}"><span th:text="${evento.nome}"></span></a></td>
+			<td><span class="span-local purple-text" th:text="${evento.local}"></span></td>
+			<td><span class="span-data purple-text text-lighten-1" th:text="${evento.data}"></span></td>
+			<td><span class="span-horario purple-text text-lighten-2" th:text="${evento.horario}"></span></td>
+			<td><a th:href="${(#mvc.url('EC#deletarEvento').arg(0, evento.id)).build()}"><i class="material-icons purple-text text-darken-1">delete_forever</i></a></td>
+		</tr>
+	</tbody>
+	
+	</table>
+	
+
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
